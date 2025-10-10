@@ -6,4 +6,8 @@
 "et":"US/Eastern",
 "pt":"US/Pacific",
 "sus":"America/Tegucigalpa",
+"finbean":"US/Pacfic",
+"dak":"Europe/London",
+"dakejp":"Europe/London",
+"texn":"US/Central"
 }
