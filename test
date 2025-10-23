@@ -1,0 +1,3 @@
+{"purge":"$(eval c=$(urlfetch json https://raw.githubusercontent.com/Everesce/theme-generator/refs/heads/main/default-8ball);c[Math.floor(Math.random()*c.length)]))",
+"corrupt":"$(eval a=`$(user)`.toLowerCase();b=$(urlfetch json https://raw.githubusercontent.com/Everesce/theme-generator/refs/heads/main/default-8ball);c=[`Have you tried Cmd+Q?`,`Stop shaking me, Texn!`,`Why are you bothering me, Texn?`];a==`everesce`?(c[Math.floor(Math.random()*c.length)]):(b[Math.floor(Math.random()*b.length)]))"
+}
