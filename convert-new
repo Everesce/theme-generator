@@ -1,0 +1,9 @@
+b=parseFloat;
+c=a.match(/^([0-9.]+)\s?([a-zA-Z]{1,6})$/);
+l=b(c[1]);
+m=c[2];
+m==`kg`?((l*2.20462).toFixed(2)+` lbs or `+(l*0.15747).toFixed(2)+` stones`):
+m==(`lb`||`lbs`||`pound`||`pounds`)?((l/2.20462).toFixed(2)+` kg or `+(l/14).toFixed(2)+` stones`):
+m==`f`?(((l-32)/1.8).toFixed(1)+`\xB0C or `+(((l-32)/1.8)+273.15).toFixed(1)+`K or `+((((l-32)/1.8)+273.15)*1.8).toFixed(1)+`\xB0R`):
+m==`c`?(((b*1.8)+32).toFixed(1)+`\xB0F or `+(b+273.15).toFixed(1)+`K or `+((b+273.15)*1.8).toFixed(1)+`\xB0R`):
+`Please input the command correctly`
