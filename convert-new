@@ -6,7 +6,12 @@ l=b(c[1]??``);
 m=b(d[3]??d[2]??0);
 n=b(d[8]??0);
 o=(m*12)+n;
+p=b(e[3]??e[2]??0);
+q=b(e[8]??0);
+r=(p*14)+q;
 s=c[2];
+t=d[5];
+u=e[5];
 s==`kg`?((l*2.20462).toFixed(2)+` lbs or `+(l*0.15747).toFixed(2)+` stones`):
 s==(`lb`||`lbs`||`pound`||`pounds`)?((l/2.20462).toFixed(2)+` kg or `+(l/14).toFixed(2)+` stones`):
 s==`f`?(((l-32)/1.8).toFixed(1)+`\xB0C or `+(((l-32)/1.8)+273.15).toFixed(1)+`K or `+((((l-32)/1.8)+273.15)*1.8).toFixed(1)+`\xB0R`):
