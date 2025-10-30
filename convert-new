@@ -10,7 +10,7 @@ s=c[2];
 s==`kg`?((l*2.20462).toFixed(2)+` lbs or `+(l*0.15747).toFixed(2)+` stones`):
 s==(`lb`||`lbs`||`pound`||`pounds`)?((l/2.20462).toFixed(2)+` kg or `+(l/14).toFixed(2)+` stones`):
 s==`f`?(((l-32)/1.8).toFixed(1)+`\xB0C or `+(((l-32)/1.8)+273.15).toFixed(1)+`K or `+((((l-32)/1.8)+273.15)*1.8).toFixed(1)+`\xB0R`):
-s==`c`?(((b*1.8)+32).toFixed(1)+`\xB0F or `+(b+273.15).toFixed(1)+`K or `+((b+273.15)*1.8).toFixed(1)+`\xB0R`):
+s==`c`?(((l*1.8)+32).toFixed(1)+`\xB0F or `+(l+273.15).toFixed(1)+`K or `+((l+273.15)*1.8).toFixed(1)+`\xB0R`):
 s==`cm`?((l*0.3937).toFixed(2)+` inches or `+Math.floor(l*0.032808)+` ft `+((l*0.3937)%12).toFixed(0)+` in or `+(l*0.000006214).toFixed(3)+` miles`):
 s==(`m`||`meter`||`meters`)?((l*39.37).toFixed(2)+` inches or `+Math.floor(l*3.2808)+` ft `+((l*39.37)%12).toFixed(0)+` in or `+(l*0.0006214).toFixed(3)+` miles`):
 s==`km`?((l*39370).toFixed(2)+` inches or `+Math.floor(l*3280.84)+` ft `+((l*39370)%12).toFixed(0)+` in or `+(l*0.62137).toFixed(3)+` miles`):
