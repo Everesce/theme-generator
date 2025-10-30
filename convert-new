@@ -3,6 +3,9 @@ c=a.match(/^([0-9.]+)\s?([a-zA-Z]{1,6})$/);
 d=a.match(/^(([0-9.]+)\s+)?([0-9.]+)?((['ft]+)?)(\s?)((([0-9.]+)|([0-9.]+))(\s)?(["(in)])+)?$/);
 e=a.match(/^(([0-9.]+)\s+)?([0-9.]+)?(([stones]{2,6})?)(\s?)((([0-9.]+)|([0-9.]+))(\s)?([poundlbs]{2,6})+)?$/);
 l=b(c[1]);
+m=b(d[3]??d[2]??0);
+n=b(d[8]??0);
+o=(m*12)+n;
 s=c[2];
 s==`kg`?((l*2.20462).toFixed(2)+` lbs or `+(l*0.15747).toFixed(2)+` stones`):
 s==(`lb`||`lbs`||`pound`||`pounds`)?((l/2.20462).toFixed(2)+` kg or `+(l/14).toFixed(2)+` stones`):
@@ -13,4 +16,5 @@ s==(`m`||`meter`||`meters`)?((l*39.37).toFixed(2)+` inches or `+Math.floor(l*3.2
 s==`km`?((l*39370).toFixed(2)+` inches or `+Math.floor(l*3280.84)+` ft `+((l*39370)%12).toFixed(0)+` in or `+(l*0.62137).toFixed(3)+` miles`):
 s==(`in`||`inches`||`\"`)?((l*2.54).toFixed(2)+` cm or `+(l/39.37).toFixed(2)+` m or `+(l/39370.1).toFixed(2)+` km or `+Math.floor(l/12)+` ft `+(l%12).toFixed(0)+` in or `+(l/63360).toFixed(3)+` miles`):
 s==(`mile`||`miles`)?((l*160934).toFixed(2)+` cm or `+(l*1609.34).toFixed(2)+` m or `+(l*1.60934).toFixed(2)+` km or `+Math.floor(l*5280)+` ft `+((l*63360)%12).toFixed(0)+` in`):
+t==(`ft`||`\'`||`feet`)?((o*2.54).toFixed(2)+` cm or `+(o/39.37).toFixed(2)+` m or `+(o/39370.1).toFixed(2)+` km or `+(o/63360).toFixed(3)+` miles`):
 `Please input the command in the correct format of [quantity][kg/lbs/stones/F/C/cm/meter/km/in/ft/miles]`
